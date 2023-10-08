@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Eamergency"
+        android:title="Eamergency Contact" />
+
+    <item
+        android:id="@+id/volunteer"
+        android:title="volunteer" />
+
+    <item
+        android:id="@+id/volunteerlist"
+        android:title="All volunteer" />
+
+    <item
+        android:id="@+id/ContactUs"
+        android:title="Contact Us" />
+    <item
+        android:id="@+id/donation"
+        android:title="donation"
+        /><item
+        android:id="@+id/donationlist"
+        android:title="All donation"
+        />
+</menu>

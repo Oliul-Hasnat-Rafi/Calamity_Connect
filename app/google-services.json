@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "360751003071",
+    "project_id": "calamity-connect",
+    "storage_bucket": "calamity-connect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360751003071:android:94365a0a1b8c35c7d85d0a",
+        "android_client_info": {
+          "package_name": "com.example.calamityconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360751003071-dubo2vlejs8n04bdm0bbd2pfe4se6ddn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz0ySwrZfGRTfyv_t9UnD-4Y6akG0GbOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360751003071-dubo2vlejs8n04bdm0bbd2pfe4se6ddn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

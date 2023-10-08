@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:title="Home"
+    android:icon="@drawable/home"
+    android:id="@+id/homemenu"
+    android:color="#FF5722"
+    />
+    <item
+        android:title="Post"
+        android:icon="@drawable/plus"
+        android:id="@+id/postmenu"
+        android:color="#FF9800"
+    />
+
+    <item
+        android:title="Profile"
+        android:icon="@drawable/profile"
+        android:id="@+id/profilemenu"
+        android:color="#FFC107"
+    />
+
+</menu>
