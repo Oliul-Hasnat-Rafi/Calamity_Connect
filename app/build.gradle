@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.calamityconnect'
-    compileSdk 33
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.calamityconnect"
         minSdk 23
-        targetSdk 33
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 

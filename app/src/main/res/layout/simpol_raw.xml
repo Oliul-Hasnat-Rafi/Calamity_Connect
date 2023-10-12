@@ -9,21 +9,22 @@
         android:id="@+id/cardView1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_150sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:backgroundTint="#80B3FF"
         app:cardCornerRadius="@dimen/_6sdp"
-        android:backgroundTint="@color/lite_orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
-            <ImageView
-                android:id="@+id/img"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_120sdp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img1" />
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img1" />
 
         <TextView
             android:id="@+id/name"
