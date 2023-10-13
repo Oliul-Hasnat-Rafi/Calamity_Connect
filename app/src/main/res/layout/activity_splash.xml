@@ -23,6 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_70sdp"
-        android:indeterminateTint="@color/theme_color"
+        android:indeterminateTint="#80B3FF"
        />
 </androidx.appcompat.widget.LinearLayoutCompat>

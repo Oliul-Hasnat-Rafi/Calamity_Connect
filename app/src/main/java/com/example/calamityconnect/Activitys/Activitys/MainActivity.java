@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.calamityconnect.Activitys.Fragment.ContactUs_Fragment;
 import com.example.calamityconnect.Activitys.Fragment.EamergencyFragment;
@@ -21,11 +22,14 @@ import com.example.calamityconnect.R;
 import com.example.calamityconnect.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import io.ak1.OnBubbleClickListener;
+
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     public ActionBarDrawerToggle actionBarDrawerToggle;
     FragmentTransaction transaction;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,27 +49,48 @@ public class MainActivity extends AppCompatActivity {
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        binding.bottomMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//        binding.bottomMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                switch (item.getItemId()) {
+//                    case R.id.homemenu:
+//                        transaction.replace(R.id.content, new homeFragment());
+//                        break;
+//                    case R.id.postmenu:
+//                        transaction.replace(R.id.content, new postFragment());
+//                        break;
+//                    case R.id.profilemenu:
+//                        transaction.replace(R.id.content, new profileFragment());
+//                        break;
+//
+//                }
+//                transaction.commit();
+//                return true;
+//            }
+//        });
+
+
+        binding.bottomMenu.addBubbleListener(new OnBubbleClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            public void onBubbleClick(int i) {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                switch (item.getItemId()) {
-                    case R.id.homemenu:
+                switch (i) {
+                    case 0:
                         transaction.replace(R.id.content, new homeFragment());
                         break;
-                    case R.id.postmenu:
+                    case 1:
                         transaction.replace(R.id.content, new postFragment());
                         break;
-                    case R.id.profilemenu:
+                    case 2:
                         transaction.replace(R.id.content, new profileFragment());
                         break;
 
                 }
                 transaction.commit();
-                return true;
-             }
-        });
 
+            }
+        });
     }
 
 //    @Override
@@ -88,32 +113,20 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
 
-            case R.id.Eamergency:
-                getSupportFragmentManager().beginTransaction().replace(R.id.content, new EamergencyFragment()).commit();
-                return true;
 
-                case R.id.volunteer:
+            case R.id.volunteer:
                 getSupportFragmentManager().beginTransaction().replace(R.id.content, new volunteer_form_Fragment()).commit();
                 return true;
 
-                case R.id.ContactUs:
+            case R.id.ContactUs:
                 getSupportFragmentManager().beginTransaction().replace(R.id.content, new ContactUs_Fragment()).commit();
                 return true;
 
-            case R.id.volunteerlist:
-                   getSupportFragmentManager().beginTransaction().replace(R.id.content, new list_volun_Fragment()).commit();
-                return true;
-
-            case R.id.donation:
-                Intent intent =new Intent(this, donationActivity.class);
-                startActivity(intent);
-                return true;
 
             case R.id.donationlist:
-                Intent intent1 =new Intent(this, Donation_list_Activity.class);
+                Intent intent1 = new Intent(this, Donation_list_Activity.class);
                 startActivity(intent1);
-                    return true;
-
+                return true;
 
 
             default:

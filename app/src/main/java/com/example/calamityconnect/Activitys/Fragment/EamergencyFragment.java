@@ -32,7 +32,7 @@ ArrayList<ema_model> ema_modelList;
         ema_modelList.add(new ema_model("Bangladesh Police helpdesk","100"));
         ema_modelList.add(new ema_model("RAB helpdesk","101"));
         ema_modelList.add(new ema_model("Fire Service Hotline","102"));
-        ema_modelList.add(new ema_model("National helpline center for violence against women","10921"));
+        ema_modelList.add(new ema_model("National helpline center for violence against \n women","10921"));
         ema_modelList.add(new ema_model("Kaan Pete Roi","01779554391"));
         ema_modelList.add(new ema_model("Mental Health & Psychosocial helpline","01688709965"));
         ema_modelList.add(new ema_model("Moner Bondhu","01776632344"));

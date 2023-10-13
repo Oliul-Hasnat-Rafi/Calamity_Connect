@@ -1,27 +1,30 @@
 package com.example.calamityconnect.Activitys.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.calamityconnect.Activitys.Activitys.Donation_list_Activity;
+import com.example.calamityconnect.Activitys.Activitys.donationActivity;
 import com.example.calamityconnect.Activitys.Adapter.adapter;
 import com.example.calamityconnect.Activitys.Retrofit.MyRetrofit;
 import com.example.calamityconnect.Activitys.Retrofit.postapi;
 import com.example.calamityconnect.Activitys.model.model;
+import com.example.calamityconnect.R;
 import com.example.calamityconnect.databinding.FragmentHomeBinding;
-
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +32,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,16 +43,16 @@ public class homeFragment extends Fragment {
     private adapter adapter;
     RequestQueue queue;
     String url ="https://zirwabd.000webhostapp.com/image/json_user_fetch.php";
+    FragmentTransaction transaction;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(getLayoutInflater(),container,false);
-
+        transaction = getActivity().getSupportFragmentManager().beginTransaction();
 
         slider();
-
-
+        categori();
         modelList=new ArrayList<>();
 
         LinearLayoutManager layoutManager =new LinearLayoutManager(getContext(), RecyclerView.VERTICAL,false);
@@ -100,6 +104,29 @@ public class homeFragment extends Fragment {
 //        });
 
         return binding.getRoot();
+    }
+
+    private void categori() {
+        binding.emacall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                transaction.replace(R.id.content, new EamergencyFragment()).commit();
+            }
+        });
+        binding.donationimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent donation =new Intent(getActivity(), donationActivity.class);
+
+                startActivity(donation);
+            }
+        });
+        binding.volunteerimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                transaction.replace(R.id.content, new list_volun_Fragment()).commit();
+            }
+        });
     }
 
     private void slider() {

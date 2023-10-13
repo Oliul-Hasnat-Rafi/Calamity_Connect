@@ -34,10 +34,10 @@
                 android:id="@+id/signUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppins"
                 android:text="Sign Up"
-                android:textColor="@color/theme_color"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_22ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,16 +55,16 @@
                 app:boxCornerRadiusBottomStart="@dimen/_10sdp"
                 app:boxCornerRadiusTopEnd="@dimen/_10sdp"
                 app:boxCornerRadiusTopStart="@dimen/_10sdp"
-                app:boxStrokeColor="@color/theme_color"
+                app:boxStrokeColor="@color/black"
                 app:boxStrokeWidth="@dimen/_1sdp"
                 app:boxStrokeWidthFocused="@dimen/_1sdp"
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/theme_color"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/signUp"
                 app:startIconDrawable="@drawable/name"
-                app:startIconTint="@color/theme_color">
+                app:startIconTint="#80B3FF">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userName"
@@ -89,16 +89,18 @@
                 app:boxCornerRadiusBottomStart="@dimen/_10sdp"
                 app:boxCornerRadiusTopEnd="@dimen/_10sdp"
                 app:boxCornerRadiusTopStart="@dimen/_10sdp"
-                app:boxStrokeColor="@color/theme_color"
+
+                app:boxStrokeColor="@color/black"
                 app:boxStrokeWidth="@dimen/_1sdp"
                 app:boxStrokeWidthFocused="@dimen/_1sdp"
+
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/theme_color"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/name"
                 app:startIconDrawable="@drawable/phone"
-                app:startIconTint="@color/theme_color">
+                app:startIconTint="#80B3FF">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userPhone"
@@ -123,16 +125,18 @@
                 app:boxCornerRadiusBottomStart="@dimen/_10sdp"
                 app:boxCornerRadiusTopEnd="@dimen/_10sdp"
                 app:boxCornerRadiusTopStart="@dimen/_10sdp"
-                app:boxStrokeColor="@color/theme_color"
+
+                app:boxStrokeColor="@color/black"
                 app:boxStrokeWidth="@dimen/_1sdp"
                 app:boxStrokeWidthFocused="@dimen/_1sdp"
+
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/theme_color"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/phone"
                 app:startIconDrawable="@drawable/email"
-                app:startIconTint="@color/theme_color">
+                app:startIconTint="#80B3FF">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userEmail"
@@ -157,16 +161,18 @@
                 app:boxCornerRadiusBottomStart="@dimen/_10sdp"
                 app:boxCornerRadiusTopEnd="@dimen/_10sdp"
                 app:boxCornerRadiusTopStart="@dimen/_10sdp"
-                app:boxStrokeColor="@color/theme_color"
+
+                app:boxStrokeColor="@color/black"
                 app:boxStrokeWidth="@dimen/_1sdp"
                 app:boxStrokeWidthFocused="@dimen/_1sdp"
+
                 app:endIconMode="password_toggle"
-                app:hintTextColor="@color/theme_color"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/email"
                 app:startIconDrawable="@drawable/password"
-                app:startIconTint="@color/theme_color">
+                app:startIconTint="#80B3FF">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userPassword"
@@ -191,16 +197,18 @@
                 app:boxCornerRadiusBottomStart="@dimen/_10sdp"
                 app:boxCornerRadiusTopEnd="@dimen/_10sdp"
                 app:boxCornerRadiusTopStart="@dimen/_10sdp"
-                app:boxStrokeColor="@color/theme_color"
+
+                app:boxStrokeColor="@color/black"
                 app:boxStrokeWidth="@dimen/_1sdp"
                 app:boxStrokeWidthFocused="@dimen/_1sdp"
+
                 app:endIconMode="password_toggle"
-                app:hintTextColor="@color/theme_color"
+                app:hintTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/password"
                 app:startIconDrawable="@drawable/password"
-                app:startIconTint="@color/theme_color">
+                app:startIconTint="#80B3FF">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userRePassword"
@@ -228,11 +236,11 @@
                     android:id="@+id/signUpBtn"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:background="@drawable/btn_back"
+                    android:background="#80B3FF"
                     android:fontFamily="@font/poppins"
                     android:text="Sign Up"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_14ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -269,7 +277,7 @@
                     android:fontFamily="@font/poppins"
                     android:includeFontPadding="false"
                     android:text="Already Sign Up?"
-                    android:textColor="@color/theme_color"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_12ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/loginNowBtn"
@@ -281,13 +289,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_7sdp"
-                    android:background="@drawable/btn_back"
+                    android:background="#80B3FF"
                     android:fontFamily="@font/poppins"
                     android:includeFontPadding="false"
                     android:paddingHorizontal="@dimen/_12sdp"
                     android:paddingVertical="@dimen/_1sdp"
                     android:text="Sign In Now"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/alreadySignUp" />
