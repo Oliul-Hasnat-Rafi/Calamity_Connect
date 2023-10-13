@@ -62,7 +62,7 @@
 
 
                     <ImageView
-                        android:id="@+id/ema_call"
+                        android:id="@+id/emacall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/_3sdp"
@@ -78,7 +78,7 @@
                     >
 
                     <ImageView
-                        android:id="@+id/imageView1"
+                        android:id="@+id/donationimg"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:padding="@dimen/_3sdp"
@@ -94,7 +94,7 @@
                     >
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/volunteerimg"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:padding="@dimen/_3sdp"
