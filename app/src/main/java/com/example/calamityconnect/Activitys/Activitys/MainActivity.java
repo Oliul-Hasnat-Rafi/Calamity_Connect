@@ -49,48 +49,48 @@ public class MainActivity extends AppCompatActivity {
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-//        binding.bottomMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//                switch (item.getItemId()) {
-//                    case R.id.homemenu:
-//                        transaction.replace(R.id.content, new homeFragment());
-//                        break;
-//                    case R.id.postmenu:
-//                        transaction.replace(R.id.content, new postFragment());
-//                        break;
-//                    case R.id.profilemenu:
-//                        transaction.replace(R.id.content, new profileFragment());
-//                        break;
-//
-//                }
-//                transaction.commit();
-//                return true;
-//            }
-//        });
-
-
-        binding.bottomMenu.addBubbleListener(new OnBubbleClickListener() {
+        binding.bottomMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onBubbleClick(int i) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                switch (i) {
-                    case 0:
+                switch (item.getItemId()) {
+                    case R.id.homemenu:
                         transaction.replace(R.id.content, new homeFragment());
                         break;
-                    case 1:
+                    case R.id.postmenu:
                         transaction.replace(R.id.content, new postFragment());
                         break;
-                    case 2:
+                    case R.id.profilemenu:
                         transaction.replace(R.id.content, new profileFragment());
                         break;
 
                 }
                 transaction.commit();
-
+                return true;
             }
         });
+
+
+//        binding.bottomMenu.addBubbleListener(new OnBubbleClickListener() {
+//            @Override
+//            public void onBubbleClick(int i) {
+//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//                switch (i) {
+//                    case 0:
+//                        transaction.replace(R.id.content, new homeFragment());
+//                        break;
+//                    case 1:
+//                        transaction.replace(R.id.content, new postFragment());
+//                        break;
+//                    case 2:
+//                        transaction.replace(R.id.content, new profileFragment());
+//                        break;
+//
+//                }
+//                transaction.commit();
+//
+//            }
+//        });
     }
 
 //    @Override

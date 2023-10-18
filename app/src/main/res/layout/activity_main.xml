@@ -25,29 +25,29 @@
 
 
 
-        <io.ak1.BubbleTabBar
-            android:id="@+id/bottomMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="7dp"
-            app:bubbletab_menuResource="@menu/menu"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:background="@color/white"
-            ></io.ak1.BubbleTabBar>
+<!--        <io.ak1.BubbleTabBar-->
+<!--            android:id="@+id/bottomMenu"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="7dp"-->
+<!--            app:bubbletab_menuResource="@menu/menu"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:background="@color/white"-->
+<!--            ></io.ak1.BubbleTabBar>-->
 
 
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomMenu"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="@dimen/_45sdp"-->
-<!--        android:background="@color/gray"-->
-<!--        app:itemRippleColor="@color/orange"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:menu="@menu/menu" />-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/gray"
+        app:itemRippleColor="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
