@@ -9,20 +9,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.calamityconnect.Activitys.Fragment.ContactUs_Fragment;
-import com.example.calamityconnect.Activitys.Fragment.EamergencyFragment;
 import com.example.calamityconnect.Activitys.Fragment.homeFragment;
-import com.example.calamityconnect.Activitys.Fragment.list_volun_Fragment;
 import com.example.calamityconnect.Activitys.Fragment.postFragment;
 import com.example.calamityconnect.Activitys.Fragment.profileFragment;
 import com.example.calamityconnect.Activitys.Fragment.volunteer_form_Fragment;
 import com.example.calamityconnect.R;
 import com.example.calamityconnect.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import io.ak1.OnBubbleClickListener;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -127,7 +122,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(this, Donation_list_Activity.class);
                 startActivity(intent1);
                 return true;
-
+            case R.id.resource:
+                Intent intent2 = new Intent(this, pdfview.class);
+                startActivity(intent2);
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);

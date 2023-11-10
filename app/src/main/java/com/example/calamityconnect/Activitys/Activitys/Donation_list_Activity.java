@@ -22,8 +22,8 @@ public class Donation_list_Activity extends AppCompatActivity {
         binding = ActivityDonationListBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-            nametv = getIntent().getStringExtra("name");
-            amounttv = getIntent().getStringExtra("amount");
+        nametv = getIntent().getStringExtra("name");
+        amounttv = getIntent().getStringExtra("amount");
 
 
         Log.i("TAG", "onCreate: "+amounttv);

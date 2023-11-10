@@ -19,6 +19,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.calamityconnect.Activitys.Activitys.Donation_list_Activity;
 import com.example.calamityconnect.Activitys.Activitys.donationActivity;
+import com.example.calamityconnect.Activitys.Activitys.ourActivity;
 import com.example.calamityconnect.Activitys.Adapter.adapter;
 import com.example.calamityconnect.Activitys.Retrofit.MyRetrofit;
 import com.example.calamityconnect.Activitys.Retrofit.postapi;
@@ -126,7 +127,17 @@ public class homeFragment extends Fragment {
             public void onClick(View view) {
                 transaction.replace(R.id.content, new list_volun_Fragment()).commit();
             }
+        }) ;
+    binding.oursactivies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent oursactivies =new Intent(getActivity(), ourActivity.class);
+
+                startActivity(oursactivies);
+            }
         });
+
+
     }
 
     private void slider() {

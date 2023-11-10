@@ -32,9 +32,9 @@ public class donationActivity extends AppCompatActivity implements SSLCTransacti
         binding.Donetion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               done_name = binding.doneName.getText().toString();
-                 done_number = binding.doneNumber.getText().toString();
-                 done_amount = binding.doneAmount.getText().toString();
+                done_name = binding.doneName.getText().toString();
+                done_number = binding.doneNumber.getText().toString();
+                done_amount = binding.doneAmount.getText().toString();
 
                 if (done_name.equals("")) {
                     binding.doneName.setError("required");

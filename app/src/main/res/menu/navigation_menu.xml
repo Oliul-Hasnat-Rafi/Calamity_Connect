@@ -15,6 +15,11 @@
 
     <item
         android:id="@+id/donationlist"
-        android:title="All donation"
+        android:title="Donation List"
+        />
+
+    <item
+        android:id="@+id/resource"
+        android:title="full chart of disaster"
         />
 </menu>
