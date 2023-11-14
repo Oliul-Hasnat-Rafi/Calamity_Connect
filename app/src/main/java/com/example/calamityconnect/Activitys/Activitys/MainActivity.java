@@ -1,14 +1,15 @@
 package com.example.calamityconnect.Activitys.Activitys;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.calamityconnect.Activitys.Fragment.ContactUs_Fragment;
 import com.example.calamityconnect.Activitys.Fragment.homeFragment;
@@ -19,11 +20,11 @@ import com.example.calamityconnect.R;
 import com.example.calamityconnect.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-
 public class MainActivity extends AppCompatActivity {
-    ActivityMainBinding binding;
-    public ActionBarDrawerToggle actionBarDrawerToggle;
-    FragmentTransaction transaction;
+    private ActivityMainBinding binding;
+    private FragmentTransaction transaction;
+
+    private long backPressedTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,72 +32,34 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        initializeFragments();
+        setupBottomNavigationView();
+    }
+
+    private void initializeFragments() {
         transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.content, new homeFragment());
         transaction.commit();
-
-//        actionBarDrawerToggle = new ActionBarDrawerToggle(this, binding.drawer, R.string.nav_open, R.string.nav_close);
-//        // pass the Open and Close toggle for the drawer layout listener
-//        // to toggle the button
-//        binding.drawer.addDrawerListener(actionBarDrawerToggle);
-//        actionBarDrawerToggle.syncState();
-//        // to make the Navigation drawer icon always appear on the action bar
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-        binding.bottomMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                switch (item.getItemId()) {
-                    case R.id.homemenu:
-                        transaction.replace(R.id.content, new homeFragment());
-                        break;
-                    case R.id.postmenu:
-                        transaction.replace(R.id.content, new postFragment());
-                        break;
-                    case R.id.profilemenu:
-                        transaction.replace(R.id.content, new profileFragment());
-                        break;
-
-                }
-                transaction.commit();
-                return true;
-            }
-        });
-
-
-//        binding.bottomMenu.addBubbleListener(new OnBubbleClickListener() {
-//            @Override
-//            public void onBubbleClick(int i) {
-//                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//                switch (i) {
-//                    case 0:
-//                        transaction.replace(R.id.content, new homeFragment());
-//                        break;
-//                    case 1:
-//                        transaction.replace(R.id.content, new postFragment());
-//                        break;
-//                    case 2:
-//                        transaction.replace(R.id.content, new profileFragment());
-//                        break;
-//
-//                }
-//                transaction.commit();
-//
-//            }
-//        });
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//
-//        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
-
+    private void setupBottomNavigationView() {
+        binding.bottomMenu.setOnNavigationItemSelectedListener(item -> {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            switch (item.getItemId()) {
+                case R.id.homemenu:
+                    transaction.replace(R.id.content, new homeFragment());
+                    break;
+                case R.id.postmenu:
+                    transaction.replace(R.id.content, new postFragment());
+                    break;
+                case R.id.profilemenu:
+                    transaction.replace(R.id.content, new profileFragment());
+                    break;
+            }
+            transaction.commit();
+            return true;
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -107,29 +70,40 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-
-
             case R.id.volunteer:
-                getSupportFragmentManager().beginTransaction().replace(R.id.content, new volunteer_form_Fragment()).commit();
+                replaceFragment(new volunteer_form_Fragment());
                 return true;
-
             case R.id.ContactUs:
-                getSupportFragmentManager().beginTransaction().replace(R.id.content, new ContactUs_Fragment()).commit();
+                replaceFragment(new ContactUs_Fragment());
                 return true;
-
-
             case R.id.donationlist:
-                Intent intent1 = new Intent(this, Donation_list_Activity.class);
-                startActivity(intent1);
+                startActivity(Donation_list_Activity.class);
                 return true;
             case R.id.resource:
-                Intent intent2 = new Intent(this, pdfview.class);
-                startActivity(intent2);
+                startActivity(pdfview.class);
                 return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
 
+    private void replaceFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.content, fragment).commit();
+    }
+
+    private void startActivity(Class<?> cls) {
+        Intent intent = new Intent(this, cls);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (System.currentTimeMillis() - backPressedTime < 2000) {
+            super.onBackPressed();
+        } else {
+            backPressedTime = System.currentTimeMillis();
+            // Show a toast or a dialog to inform the user about the double-click action
+             Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
     }
 }

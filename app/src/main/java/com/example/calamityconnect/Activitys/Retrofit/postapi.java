@@ -9,4 +9,9 @@ import retrofit2.http.GET;
 public interface postapi {
     @GET("json_user_fetch.php")
     Call<List<model>> getallpost();
+
+    @GET("json_user_fetch_slider.php")
+    Call<List<model>> getSliderData();
 }
+
+

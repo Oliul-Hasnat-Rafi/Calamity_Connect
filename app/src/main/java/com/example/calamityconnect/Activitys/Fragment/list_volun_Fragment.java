@@ -42,7 +42,7 @@ public class list_volun_Fragment extends Fragment {
 
         LinearLayoutManager layoutManager =new LinearLayoutManager(getContext(), RecyclerView.VERTICAL,false);
         binding.volunlist.setLayoutManager(layoutManager);
-        volunapi volunapi= MyRetrofit.getRetrofit().create(volunapi.class);
+        volunapi volunapi= MyRetrofit.getClient().create(volunapi.class);
         Call<List<volunteenmodel>> listvolun = volunapi.getallvolunlist();
         listvolun.enqueue(new Callback<List<volunteenmodel>>() {
             @Override

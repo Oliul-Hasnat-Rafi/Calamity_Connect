@@ -27,4 +27,11 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="EditTextBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:layout_marginTop">@dimen/_20sdp</item>
+    </style>
+
 </resources>

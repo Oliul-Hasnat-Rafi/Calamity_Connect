@@ -60,7 +60,7 @@ public class homeFragment extends Fragment {
         binding.recylerview.setLayoutManager(layoutManager);
 
 
-        postapi postapi = MyRetrofit.getRetrofit().create(postapi.class);
+        postapi postapi = MyRetrofit.getClient().create(postapi.class);
 
         Call<List<model>> listpost = postapi.getallpost();
 

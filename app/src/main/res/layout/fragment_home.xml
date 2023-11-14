@@ -20,9 +20,8 @@
         android:id="@+id/cateitem"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_70sdp"
-
         android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/recylerview"
@@ -37,12 +36,28 @@
             android:elevation="@dimen/_25sdp"
             app:cardCornerRadius="@dimen/_8sdp">
 
-            <ImageView
-                android:id="@+id/emacall"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/_3sdp"
-                android:src="@drawable/emergency" />
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/emacall"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/emergency" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -52,12 +67,27 @@
             android:elevation="@dimen/_25sdp"
             app:cardCornerRadius="@dimen/_8sdp">
 
-            <ImageView
-                android:id="@+id/donationimg"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/_3sdp"
-                android:src="@drawable/donation" />
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/donationimg"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/donation" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donation"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -67,12 +97,26 @@
             android:elevation="@dimen/_25sdp"
             app:cardCornerRadius="@dimen/_8sdp">
 
-            <ImageView
-                android:id="@+id/volunteerimg"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/_3sdp"
-                android:src="@drawable/volunteer" />
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/volunteerimg"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/volunteer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volunteer"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -82,12 +126,27 @@
             android:elevation="@dimen/_25sdp"
             app:cardCornerRadius="@dimen/_8sdp">
 
-            <ImageView
-                android:id="@+id/oursactivies"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/_3sdp"
-                android:src="@drawable/groups" />
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/oursactivies"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/groups" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Activities"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
 

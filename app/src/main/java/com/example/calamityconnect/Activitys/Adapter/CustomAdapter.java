@@ -13,12 +13,15 @@ public class CustomAdapter extends BaseAdapter {
     Context context;
     String namelist[];
     String amountlist[];
+
+    String membershipLevel[];
     LayoutInflater inflter;
 
-    public CustomAdapter(Context applicationContext, String[] namelist, String[] amountlist) {
+    public CustomAdapter(Context applicationContext, String[] namelist, String[] amountlist,String[] membershipLevel) {
         this.context = context;
         this.namelist = namelist;
         this.amountlist = amountlist;
+        this.membershipLevel = membershipLevel;
         inflter = (LayoutInflater.from(applicationContext));
     }
 
@@ -42,9 +45,11 @@ public class CustomAdapter extends BaseAdapter {
         view = inflter.inflate(R.layout.activity_listview, null);
         TextView d_name = (TextView) view.findViewById(R.id.nametv);
         TextView d_amount = (TextView) view.findViewById(R.id.amounttv);
+        TextView Level = (TextView) view.findViewById(R.id.membershipLeveltv);
 
         d_name.setText("Name: "+namelist[i]);
         d_amount.setText("Amount: "+amountlist[i]);
+        Level.setText("Membership: "+membershipLevel[i]);
 
         return view;
 
