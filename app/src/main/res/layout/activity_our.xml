@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_120sdp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img1" />
+            android:src="@drawable/team" />
 
         <TextView
             android:id="@+id/name"
@@ -38,45 +38,7 @@
             android:fontFamily="@font/font1"
             android:padding="@dimen/_2sdp"
             android:singleLine="true"
-            android:text="মোখা"
-            android:textColor="#0C0C0C"
-            android:textSize="16sp" />
-
-
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
-        android:layout_margin="@dimen/_10sdp"
-        android:backgroundTint="#80B3FF"
-        app:cardCornerRadius="@dimen/_6sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <ImageView
-            android:id="@+id/img1"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_120sdp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img1" />
-
-        <TextView
-            android:id="@+id/name1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center"
-            android:layout_marginTop="@dimen/_3sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:ellipsize="end"
-            android:fontFamily="@font/font1"
-            android:padding="@dimen/_2sdp"
-            android:singleLine="true"
-            android:text="মোখা"
+            android:text="Rescue Team"
             android:textColor="#0C0C0C"
             android:textSize="16sp" />
 
